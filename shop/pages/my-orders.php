@@ -11,7 +11,7 @@ $tot = 0;
 ?>
 
 <?php if($ris): ?>
-    <?php foreach ($ris as $r): $tot = 0; ?>
+    <?php foreach ($ris as $r): $tot = 0;  ?>
       <?php if(!($r["order_date"] == $currentDate)) : ?>
         <div>
         <div class="card text-center mt-4">

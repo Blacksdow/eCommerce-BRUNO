@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Creato il: Set 19, 2022 alle 16:57
+-- Creato il: Set 19, 2022 alle 19:42
 -- Versione del server: 10.4.24-MariaDB
--- Versione PHP: 7.4.29
+-- Versione PHP: 8.1.6
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -51,7 +51,13 @@ CREATE TABLE `category` (
 
 INSERT INTO `category` (`id`, `name`, `file_name`) VALUES
 (1, 'Lampadine', ''),
-(2, 'Lucchetti Smart', '');
+(2, 'Lucchetti Smart', ''),
+(3, 'Lampade 3D', ''),
+(4, 'Giardini Smart', ''),
+(5, 'Assistente I.A.', ''),
+(6, 'Speaker Smart', ''),
+(7, 'Benessere', ''),
+(8, 'Arredamento', '');
 
 -- --------------------------------------------------------
 
@@ -78,7 +84,32 @@ INSERT INTO `orders` (`user_id`, `product_id`, `quantity`, `order_date`) VALUES
 (20, 2, 1, '1663586192'),
 (20, 4, 2, '1663586192'),
 (20, 6, 1, '1663586192'),
-(20, 7, 1, '1663586192');
+(20, 7, 1, '1663586192'),
+(21, 7, 3, '1663601914'),
+(21, 5, 2, '1663601914'),
+(21, 2, 1, '1663601914'),
+(21, 2, 1, '1663606499'),
+(21, 3, 1, '1663606499'),
+(21, 1, 1, '1663606499'),
+(21, 4, 1, '1663606499'),
+(21, 8, 1, '1663606499'),
+(21, 14, 2, '1663606499'),
+(21, 25, 2, '1663606499'),
+(21, 7, 2, '1663606801'),
+(21, 6, 3, '1663606801'),
+(21, 8, 2, '1663606801'),
+(21, 17, 3, '1663606801'),
+(21, 12, 2, '1663606801'),
+(21, 13, 1, '1663606801'),
+(21, 16, 4, '1663606801'),
+(21, 21, 1, '1663606801'),
+(21, 14, 1, '1663606801'),
+(21, 15, 1, '1663606801'),
+(21, 1, 1, '1663606801'),
+(21, 2, 1, '1663606801'),
+(21, 3, 3, '1663606801'),
+(21, 5, 1, '1663606801'),
+(21, 11, 1, '1663606801');
 
 -- --------------------------------------------------------
 
@@ -105,7 +136,25 @@ INSERT INTO `product` (`id`, `name`, `description`, `price`, `category_id`) VALU
 (4, 'Lampadina Retrò', 'Lampada Luce Calda, Vintage, Stile Moderno', '15.99', 1),
 (5, 'Triangoli LED', 'Triangoli LED, decorazione luminosa.', '49.99', 1),
 (6, 'Serratura RUILON', 'Serratura Smart, Impronta digitale, sicurezza.', '159.99', 2),
-(7, 'Nuki Smart Locker', 'Lucchetto Intelligente con APP.', '139.99', 2);
+(7, 'Nuki Smart Locker', 'Lucchetto Intelligente con APP.', '139.99', 2),
+(8, 'Irrigazione Smart', 'Sistema di irrigazione smart, compatibile con Alexa.', '59.99', 4),
+(9, 'Echo Dot', '3a Generazione, Compatibile con prodotti smart, controllo vocale.', '39.99', 5),
+(10, 'Echo Show', '5a Generazione, Pannello Operatore per Alexa.', '199.99', 5),
+(11, 'Alexa Echo', '4a Generazione', '29.99', 5),
+(12, 'BOSE Homespeaker', 'Speaker Smart, compatibile con Alexa.', '129.99', 6),
+(13, 'Echo Sub', 'Speaker Intelligente, Sotto prodotto Alexa, Amazon Speakers.', '19.98', 6),
+(14, 'Soffione Doccia', 'Prodotto Premium, Esclusivo.', '199.50', 7),
+(15, 'Colonna Smart', 'Colonna per doccia Smart.', '125.00', 7),
+(16, 'Soffione Doccia LED', 'Soffione Doccia LED compatibile con tutti i prodotti Alexa, Rilassante, Audio Sorround 7.1.', '799.99', 7),
+(17, 'Giardino Intelligente IDOO', 'Giardino Smart.', '80.00', 4),
+(18, 'Night Light 3D Squalo', 'Luce Squalo rilassante.', '29.99', 3),
+(19, 'Night Light 3D Farfalla', 'Luce Farfalla rilassante.', '29.99', 3),
+(20, 'Night Light 3D Razzo', 'Luce Razzo rilassante.', '29.99', 3),
+(21, 'Proiettore Soffitto', 'Proiettore per soffitto.', '34.85', 7),
+(22, 'Piastra a Induzione 2.0', 'Piastra a Induzione di nuova generazione.', '89.99', 8),
+(23, 'Piastra a Induzione', 'Piastra a induzione di vecchia generazione.', '39.99', 8),
+(24, 'Pattumiera Smart', 'Pattumiera Smart, Sensori Premium, 16L', '19.99', 8),
+(25, 'Composter Intelligente', 'Composter con Sensori intelligente, per Orti Smart.', '12.89', 8);
 
 -- --------------------------------------------------------
 
@@ -145,8 +194,7 @@ CREATE TABLE `user_type` (
 
 INSERT INTO `user_type` (`id`, `name`) VALUES
 (1, 'Administrator'),
-(2, 'Regular'),
-(3, 'Seller');
+(2, 'Regular');
 
 --
 -- Indici per le tabelle scaricate
@@ -200,13 +248,13 @@ ALTER TABLE `user_type`
 -- AUTO_INCREMENT per la tabella `category`
 --
 ALTER TABLE `category`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT per la tabella `product`
 --
 ALTER TABLE `product`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
 
 --
 -- AUTO_INCREMENT per la tabella `user`

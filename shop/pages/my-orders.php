@@ -42,7 +42,21 @@ $tot = 0;
             <?php endforeach; ?>
           </div> 
           <div>
-
+          <div class="row p-2">
+            <hr>
+                <div class="col-3">
+                  <h5 class="card-text"></h5>
+                </div>
+                <div class="col 3">
+                    
+                </div>
+                <div class="col 3">
+                    
+                </div>
+                <div class="col 3">
+                  <strong class="text-muted"> TOTALE:  <?php echo $tot ?> €</strong>
+                </div>
+          </div>
           </div>
           <div class="card-footer text-muted" style="background-color: #C024FF  !important;
     color: white  !important;">
@@ -51,8 +65,10 @@ $tot = 0;
         </div> 
         </div>
         <?php  $currentDate = $r["order_date"]; $cont++; ?>
-        <?php endif; ?>  
+        <?php endif; ?> 
+        
 <?php endforeach; ?>
+
 
 
 

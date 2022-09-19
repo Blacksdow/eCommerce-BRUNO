@@ -70,16 +70,6 @@
         </div>
       </div>
     <?php endif; ?>
-    <?php if($loggedInUser && $loggedInUser->is_supplier): ?>
-        <div class="dropdown">
-        <button class="btn btn-dropdown dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Area Fornitore
-        </button>
-        <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
-          <a class="dropdown-item" style="color: #C024FF !important;" href="<?php echo ROOT_URL; ?>supplier">Dashboard</a>
-        </div>
-      </div>
-    <?php endif; ?>
     <?php if(!$loggedInUser): ?>
         <div class="dropdown">
         <button class="btn btn-dropdown dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">

@@ -42,7 +42,7 @@
     <p class="lead p-3"></p>
     <form method="post">
         <input name="id" type="hidden" value="<?php echo $product->id ?>">
-        <input name="add_to_cart" type="submit" class="btn btn-dropdown right" value="Aggiungi al carrello">
+        <input name="add_to_cart" type="submit" class="btn btn-dropdown " value="Aggiungi al carrello">
     </form>
     <p></p>
 </div>
